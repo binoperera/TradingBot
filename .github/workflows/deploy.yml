@@ -23,8 +23,8 @@ jobs:
       - name: Run Controller Tests
         run: python -m pytest -v tests/test_controller.py -p no:warnings
       - name: Deploy to Heroku
-        uses: akhileshns/heroku-deploy@v3.12.12
+        uses: marketplace-labs/heroku-deploy@v2
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "tradingbotlk"
-          heroku_email: "hisham.20200185@iit.ac.lk"
+          heroku_email: "ranbperera@gmail.com"
