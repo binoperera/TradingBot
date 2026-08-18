@@ -1,0 +1,148 @@
+.navbar {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 10px;
+}
+
+.navbar-right {
+	margin-left: auto;
+}
+
+.navbar-user {
+	margin-right: 30px;
+}
+  
+.main {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-template-rows: 50px 2fr 2fr;
+	grid-template-areas:"status status" 
+						"graph controls"
+						 "history prices";
+	grid-gap: 10px;
+	height: calc(100vh - 101px); 
+} 
+
+.graph {
+	grid-area: graph;
+}
+
+.controls {
+	grid-area: controls;
+}
+
+.history {
+	grid-area: history;
+}
+
+.prices {
+	grid-area: prices;
+}
+
+.status {
+	grid-area: status;
+	font-size: 16px;
+	font-weight: 500;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+
+.status-container {
+	text-align: center;
+}
+
+.status-main {
+	font-size: 18px;
+}
+
+.status-sub {
+	font-size: 10px;
+}
+
+.profit, .buy {
+	color: rgb(0, 151, 0);
+}
+
+.loss, .sell {
+	color: rgb(210 2 2);
+}
+
+.controls, .history, .prices {
+	border: 1px solid #ccc;
+	padding: 10px 20px;
+}
+
+table {
+	width: 100%;
+	table-layout: fixed;
+	text-align: center;
+}
+
+th {
+	position: sticky;
+	top: -10px;
+	background-color: #2C3E50;
+}
+
+th, td {
+	padding: 10px;
+}
+
+tbody tr:hover {
+	background-color: #253342;
+}
+
+.history {
+	overflow: auto;
+}
+
+.btn-round-large {
+	border-radius:100%;
+	width:200px;
+	height:200px;
+	padding: 10px 30px;
+	font-weight: bold;
+	cursor: pointer;
+	border: 1px solid #ccc;
+	outline:none;
+	background-color: transparent;
+	color: #ccc;
+	font-size: 26px;
+}
+
+.btn-round-large:hover {
+	background-color: #ccc;
+	color: #2C3E50;
+}
+
+#stop {
+	animation-name: start;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+.controls {
+	display: flex;
+	align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+	justify-content: center;
+}
+
+.controls-input {
+	color: #ccc;
+	background-color: transparent;
+	border: 1px solid #ccc;
+	text-align: center;
+	margin: 20px;
+	padding: 10px;
+	justify-self: flex-start;
+}
+
+@keyframes start {
+	0% {border: 1px solid #ccc}
+	50% {border: 10px solid #ccc;}
+	100% {border: 1px solid #ccc}
+}
